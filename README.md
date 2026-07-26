@@ -1,8 +1,8 @@
 # What Actually Drives Customer Ratings in Skincare? A 1M-Review Analysis
 
-Analysis of **1,094,411 customer reviews** and **9,168 products** from Sephora, testing which factors — brand, price, product category, or customer skin profile — actually explain customer satisfaction and recommendation behaviour.
+Analysis of **1,094,411 customer reviews** and **9,168 products** from Sephora, testing which factors  brand, price, product category, or customer skin profile  actually explain customer satisfaction and recommendation behaviour.
 
-Capstone project (INF4173), Université du Québec en Outaouais — April 2026.
+Capstone project (INF4173), Université du Québec en Outaouais April 2026.
 
 ---
 
@@ -10,7 +10,7 @@ Capstone project (INF4173), Université du Québec en Outaouais — April 2026.
 
 Skincare brands invest heavily in premium positioning and in tailoring products to specific skin types. Both strategies assume those levers move customer satisfaction. This project tests that assumption against a million real reviews:
 
-> Which factors — brand, price, category, or customer skin type — actually explain how customers rate skincare products and whether they recommend them?
+> Which factors  brand, price, category, or customer skin type — actually explain how customers rate skincare products and whether they recommend them?
 
 ## Data
 
@@ -21,7 +21,7 @@ Skincare brands invest heavily in premium positioning and in tailoring products 
 
 **The raw data is not redistributed in this repository.** Download it from the Kaggle links above and place the CSV files in a `data/` folder before running the notebook. Both datasets are public and anonymised; user identifiers are opaque codes with no traceable link to real individuals.
 
-The two sources use incompatible product identifiers and cannot be joined directly. They are analysed separately and reconciled at brand and category level — a documented constraint, not an oversight.
+The two sources use incompatible product identifiers and cannot be joined directly. They are analysed separately and reconciled at brand and category level  a documented constraint, not an oversight.
 
 ## Repository contents
 
@@ -44,13 +44,13 @@ Tools: Python (pandas, matplotlib, seaborn, scikit-learn, vaderSentiment), Power
 
 ## Findings
 
-**1. Price does not predict satisfaction.** Pearson correlation between price and rating: **0.019**. Average ratings across price bands: entry 3.90, mid 4.05, premium 4.07 — a 0.17-point spread. Customers appear to scale their expectations to what they paid, cancelling out any premium advantage.
+**1. Price does not predict satisfaction.** Pearson correlation between price and rating: **0.019**. Average ratings across price bands: entry 3.90, mid 4.05, premium 4.07  a 0.17-point spread. Customers appear to scale their expectations to what they paid, cancelling out any premium advantage.
 
-**2. Popularity does not equal perceived quality.** CLINIQUE leads on review volume (49,029 reviews) but averages 4.25/5. DAMDAM, with 1,128 reviews, averages 4.74/5. Dermalogica — a professional, therapist-recommended brand — averages 4.61/5 across 24,415 reviews. Specialist brands serving a self-selected, informed audience consistently outperform mass-market brands.
+**2. Popularity does not equal perceived quality.** CLINIQUE leads on review volume (49,029 reviews) but averages 4.25/5. DAMDAM, with 1,128 reviews, averages 4.74/5. Dermalogica  a professional, therapist-recommended brand averages 4.61/5 across 24,415 reviews. Specialist brands serving a self-selected, informed audience consistently outperform mass-market brands.
 
-**3. Skin type is not a differentiator.** Average ratings by skin type: combination 4.31, dry 4.29, normal 4.28, oily 4.27 — a spread under 0.04 points, stable across every brand tested. This **contradicts** the project's initial hypothesis that sensitive-skin users would rate more harshly.
+**3. Skin type is not a differentiator.** Average ratings by skin type: combination 4.31, dry 4.29, normal 4.28, oily 4.27  a spread under 0.04 points, stable across every brand tested. This **contradicts** the project's initial hypothesis that sensitive-skin users would rate more harshly.
 
-**4. Satisfaction and recommendation are distinct behaviours.** Some customers rate 4–5 stars without recommending (concentrated in premium brands — Tatcha, Drunk Elephant, Estée Lauder), while others rate 1–2 stars but still recommend (concentrated in technical, active-ingredient brands like The Ordinary). Two products appear in *both* groups — Drunk Elephant Protini and LANEIGE Lip Sleeping Mask — making them the genuinely polarising items in the catalogue.
+**4. Satisfaction and recommendation are distinct behaviours.** Some customers rate 4–5 stars without recommending (concentrated in premium brands Tatcha, Drunk Elephant, Estée Lauder), while others rate 1–2 stars but still recommend (concentrated in technical, active-ingredient brands like The Ordinary). Two products appear in *both* groups — Drunk Elephant Protini and LANEIGE Lip Sleeping Mask  making them the genuinely polarising items in the catalogue.
 
 **5. What the model taught me.** A decision tree predicting recommendation reached 96% accuracy, with the rating variable accounting for 99.97% of feature importance. This is not a finding — it is **target leakage**: rating and recommendation measure the same underlying satisfaction, so the model only restates a tautology. Diagnosing this is the honest outcome. A meaningful version of this model would need to predict recommendation from product and customer attributes *only*, excluding the rating.
 
