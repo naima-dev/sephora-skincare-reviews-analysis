@@ -1,4 +1,3 @@
-# sephora-skincare-reviews-analysis
 # What Actually Drives Customer Ratings in Skincare? A 1M-Review Analysis
 
 Analysis of **1,094,411 customer reviews** and **9,168 products** from Sephora, testing which factors — brand, price, product category, or customer skin profile — actually explain customer satisfaction and recommendation behaviour.
@@ -18,7 +17,7 @@ Skincare brands invest heavily in premium positioning and in tailoring products 
 | Dataset | Rows | Level | Source |
 |---|---|---|---|
 | Reviews | 1,094,411 | Individual review | [Sephora Products and Skincare Reviews](https://www.kaggle.com/datasets/nadyinky/sephora-products-and-skincare-reviews) (Kaggle) |
-| Products | 9,168 | Product | Sephora Cosmetics Ingredient Analysis (Kaggle) |
+| Products | 9,168 | Product | [All Products Available on Sephora Website](https://www.kaggle.com/datasets/raghadalharbi/all-products-available-on-sephora-website) (Kaggle) |
 
 **The raw data is not redistributed in this repository.** Download it from the Kaggle links above and place the CSV files in a `data/` folder before running the notebook. Both datasets are public and anonymised; user identifiers are opaque codes with no traceable link to real individuals.
 
