@@ -52,9 +52,11 @@ Tools: Python (pandas, matplotlib, seaborn, scikit-learn, vaderSentiment), Power
 
 **4. Satisfaction and recommendation are distinct behaviours.** Some customers rate 4–5 stars without recommending (concentrated in premium brands Tatcha, Drunk Elephant, Estée Lauder), while others rate 1–2 stars but still recommend (concentrated in technical, active-ingredient brands like The Ordinary). Two products appear in *both* groups — Drunk Elephant Protini and LANEIGE Lip Sleeping Mask  making them the genuinely polarising items in the catalogue.
 
-**5. What the model taught me.** A decision tree predicting recommendation reached 96% accuracy, with the rating variable accounting for 99.97% of feature importance. This is not a finding — it is **target leakage**: rating and recommendation measure the same underlying satisfaction, so the model only restates a tautology. Diagnosing this is the honest outcome. A meaningful version of this model would need to predict recommendation from product and customer attributes *only*, excluding the rating.
+**5. What the model taught me.** A decision tree predicting recommendation reached
+96% accuracy, with the rating variable accounting for 99.97% of feature importance.
+This is not a finding — it is **target leakage**: rating and recommendation measure
+the same underlying satisfaction, so the model only restates a tautology.
 
-## What this means for the business
 
 For **brands**: the alignment between what a product promises and what it delivers matters more than price positioning or catalogue size. A niche brand that speaks to an informed, well-matched audience earns better reviews than a mass-market brand with ten times the volume. Serving fewer, better-matched customers is a defensible strategy, not a limitation.
 
